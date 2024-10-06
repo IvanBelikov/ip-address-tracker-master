@@ -1,5 +1,7 @@
 const path = require('path')
 const Dotenv = require('dotenv-webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const { plugins } = require('./postcss.config')
 
 module.exports = {
@@ -38,7 +40,19 @@ module.exports = {
             },
         ],
     },
-    plugins: [new Dotenv()],
+    plugins: [
+        new Dotenv(),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'public'),
+                    to: path.resolve(__dirname, 'dist'),
+                    noErrorOnMissing: true,
+                },
+            ],
+        }),
+        new CleanWebpackPlugin(),
+    ],
     resolve: {
         extensions: ['.ts', '.js', 'tsx'],
     },
