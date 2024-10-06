@@ -1,0 +1,21 @@
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-normal {
+    font-family: 'Rubik', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+@mixin font-semi-bold {
+    font-family: 'Rubik', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+}

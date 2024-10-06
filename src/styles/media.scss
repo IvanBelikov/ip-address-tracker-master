@@ -1,0 +1,30 @@
+@use './variables' as vars;
+
+@media (min-width: vars.$tabletContainer) {
+    .search-form {
+        max-width: 650px;
+    }
+
+    .address-info {
+        max-width: 650px;
+        top: 200px;
+    }
+}
+
+@media (min-width: vars.$desktopContainer) {
+    .input-section {
+        min-height: 300px;
+    }
+
+    .search-form {
+        max-width: 740px;
+    }
+
+    .address-info {
+        max-width: 900px;
+        gap: 64px;
+        top: 250px;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}

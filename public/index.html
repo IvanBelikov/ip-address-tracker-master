@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <section class="input-section">
+      <h1 class="input-section__header">IP Address Tracker</h1>
+      <form class="search-form" action="post">
+        <input
+          class="search-form__input"
+          id="ipInput"
+          type="text"
+          pattern="((^|\.)((25[0-5])|(2[0-4]\d)|(1\d\d)|([1-9]?\d))){4}$"
+          placeholder="Enter your IP address."
+          required
+        />
+        <button
+          type="submit"
+          id="submitButton"
+          class="search-form__submit"
+        ></button>
+      </form>
+    </section>
+    <section class="map-section">
+      <div class="map" id="map"></div>
+    </section>
+    <div class="address-info">
+      <div class="address-info__content">
+        <p class="address-info__description">Ip address</p>
+        <h2 id="ipAddressInfo" class="address-info__value">-</h2>
+      </div>
+      <div class="address-info__content">
+        <p class="address-info__description">Location</p>
+        <h2 id="locationInfo" class="address-info__value">-</h2>
+      </div>
+      <div class="address-info__content">
+        <p class="address-info__description">Timezone</p>
+        <h2 id="timezoneInfo" class="address-info__value">-</h2>
+      </div>
+      <div class="address-info__content">
+        <p class="address-info__description">ISP</p>
+        <h2 id="ispInfo" class="address-info__value">-</h2>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
