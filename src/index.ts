@@ -5,11 +5,7 @@ import * as L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 
 import markerIcon from './assets/marker-icon-2x.svg'
-
-import test from './assets/icon-arrow.svg'
 import './styles/index.scss'
-
-console.log(test, markerIcon)
 
 let map: L.Map
 
